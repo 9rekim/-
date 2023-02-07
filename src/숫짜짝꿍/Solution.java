@@ -13,3 +13,57 @@ package 숫짜짝꿍;
 
 public class Solution {
 }
+
+/* 너무 어려워서 일단 보류
+
+#공부하면서 깨달은 것
+
+1. charAt()이라는 녀석이다.
+이 녀석은 String으로 저장된 문자열 중에서 한 글자만 선택해서
+char타입으로 변환해주는 녀석이다.
+ex) str = String "안녕하세요"
+    char c = " "
+    c = str.charAt(0)
+    System.out.println(c)
+
+    출력값 : "안"
+
+숫자 받기
+숫자로 받는 방법입니다
+a를 0으로 입력한 후 b에서 숫자로 받습니다
+- 48을 하는 이유는 숫자 0-9까지는 유니코드상 48-57입니다
+그래서 48을 빼서 b에서 숫자 0을 집어넣었습니다
+
+    String a = "0"
+    int b = a.charAt(0)-48
+    System.out.println(b)
+
+    출력값 : 0
+
+2. toString 메서드는 Object클래스의 메서드로
+객체를 String(문자열) 타입으로 변경시켜준다
+
+3. Integer.parseInt(Stiring s)
+   숫자형의 문자열 b를 10진수의 integer값으로 변경해줌
+
+4. append 메서드(String 클래스의 concat메서드와 같은 기능이지만 속도가 빠르다고 함)
+    append()메서드는 문자열 맨끝에 문자를 붙여주는 메서드임
+    StringBuffer 클래스의 메서드이므로 임포트 해줘야함
+
+    (ex)
+public class Main{
+    public static void main(String args[]) {
+        StringBuffer str = new StringBuffer("Java");
+        System.out.println("원본 문자열 : " + str);
+
+        System.out.println(str.append("왕이 되고 싶어요!"));
+        System.out.println("append() 메소드 이후 문자열 : " + str);
+    }
+}
+
+    출력값 :
+    원본 문자열 : Java
+    Java왕이 되고 싶어요!
+    append() 메소드 이후 문자열 : Java왕이 되고 싶어요!
+
+ */
